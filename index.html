@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Monitoring teploty a vlhosti v serverovně</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section>
+                    <h2>Monitoring teploty a vlhosti v serverovně</h2>
+                </section>
+				<section>
+                    <h2>Cíle</h2>
+                    <ul>
+                        <li>Zvýšit bezpečnost našich serverů</li>
+                        <ul>
+                            <li>Ochrana proti výpadku klimatizace</li>
+                            <li>Varování při vniku vody</li>
+                        </ul>
+                        <li>Nový Quanti produkt pro firmy</li>
+                    </ul>
+				</section>
+				<section>
+                    <h2>Hardware</h2>
+                    <ul>
+                        <li>Raspberry Pi</li>
+                        <li>Arduino</li>
+                        <li>Měřiče teploty a vlhkosti</li>
+                        <li>Display aktuálních stavů</li>
+                    </ul>
+				</section>
+				<section>
+                    <img src="images/hw.jpg" />
+				</section>
+				<section>
+                    <img src="images/navrh.jpg" />
+                </section>
+				<section>
+                    <h2>Software</h2>
+                    <ul>
+                        <li>C++ pro Arduino</li>
+                        <li>Raspbian pro Raspberry pi</li>
+                        <li>Python pro čtení údajů z Arduina</li>
+                        <li>MariaDB pro ukládání výsledků</li>
+                        <li>Java spring pro vystavení výsledků</li>
+                        <li>Zabbix pro monitoring výsledků</li>
+                    </ul>
+				</section>
+				<section>
+                    <img src="images/c.png" />
+				</section>
+				<section>
+                    <img src="images/python.png" />
+				</section>
+				<section>
+                    <img src="images/java.png" />
+				</section>
+				<section>
+                    <img src="images/call.png" />
+				</section>
+				<section>
+                    <h2>Technické překážky</h2>
+                    <ul>
+                        <li>Pomalá SD karta na Raspberry - MariaDB in memory</li>
+                        <li>Špatná dokumentace k součástkám - použití multimeteru</li>
+                        <li>Problémy s napájením Raspberry pi - silnější nabíječka</li>
+                        <li>Komplikace s kabely</li>
+                    </ul>
+				</section>
+				<section>
+                    <h2>Výsledky</h2>
+                    <ul>
+                        <li>Úspěšně instalováno v serverovně</li>
+                        <li>Úspěšně monitorováno v Zabbixu</li>
+                    </ul>
+				</section>
+				<section>
+                    <h2>Plány do budoucna</h2>
+                    <ul>
+                        <li>Výměna pomalé SD card storage za rychlejší</li>
+                        <li>Napojení na klimatizaci přes IR ovládání</li>
+                        <li>Webová stránka k propagaci produktu</li>
+                    </ul>
+				</section>
+				<section>
+                    <h2>Dotazy?</h2>
+                </section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
